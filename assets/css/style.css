@@ -25,6 +25,7 @@
 		background-image: url("./2.jpg")
 	}
 
+
 	blockquote, q {
 		quotes: none;
 	}
@@ -33,8 +34,8 @@
 		content: '';
 		content: none;
 	}
-	
-	
+
+
 	table {
 		border-collapse: collapse;
 		border-spacing: 0;
@@ -43,7 +44,7 @@
 	body {
 		-webkit-text-size-adjust: none;
 	}
-	
+
 
 /* Box Model */
 
@@ -3404,6 +3405,86 @@
 				}
 
 	body.is-touch #banner {
+		background-attachment: scroll;
+	}
+
+	#abanner {
+		background-attachment: fixed;
+		background-color: #9697a0;
+		background-image: url("../../images/14.png");
+		background-position: center center;
+		background-size: cover;
+		box-shadow: 0 0.25em 0.5em 0 rgba(19, 18, 18, 0.25);
+		min-height: 100vh;
+		position: relative;
+		text-align: center;
+		z-index: 21;
+	}
+
+		#abanner:before {
+			content: '';
+			display: inline-block;
+			height: 100vh;
+			vertical-align: middle;
+			width: 1%;
+		}
+
+		#abanner:after {
+			background-image: -moz-linear-gradient(top, rgba(10, 10, 10, 0.582), rgba(10, 10, 10, 0.582)), url("images/overlay.png");;
+			background-image: -webkit-linear-gradient(top, rgba(10, 10, 10, 0.582), rgba(10, 10, 10, 0.582)), url("images/overlay.png");;
+			background-image: -ms-linear-gradient(top, rgba(10, 10, 10, 0.582), rgba(10, 10, 10, 0.582)), url("images/overlay.png");;
+			background-image: linear-gradient(top, rgba(10, 10, 10, 0.582), rgba(10, 10, 10, 0.582)), url("images/overlay.png");;
+			content: '';
+			display: block;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		#abanner .content {
+			display: inline-block;
+			margin-right: 1%;
+			max-width: 95%;
+			padding: 6em;
+			position: relative;
+			text-align: right;
+			vertical-align: middle;
+			z-index: 1;
+		}
+
+			#abanner .content header {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+				#abanner .content header h2 {
+					font-size: 2.5em;
+					margin: 0;
+				}
+
+				#abanner .content header p {
+					margin: 0.5em 0 0 0;
+					top: 0;
+				}
+
+			#abanner .content .image {
+				border-radius: 100%;
+				display: inline-block;
+				height: 18em;
+				margin-left: 3em;
+				vertical-align: middle;
+				width: 18em;
+			}
+
+				#abanner .content .image img {
+					border-radius: 100%;
+					display: block;
+					width: 100%;
+				}
+
+	body.is-touch #abanner {
 		background-attachment: scroll;
 	}
 
